@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .green{
+            color:green;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 >Hello this is my website</h1>
+    <img id="head" src="" alt="This is the image">
+
+    <form action="">
+        <label for="male">male</label>
+       <input type="checkbox" value="male">
+        <button type="submit"> Submit</button>
+    </form>
+    <script>
+
+        var maleinput= document.getElementById("male");
+        var button = document.getElementId("submit");
+
+        button.addEventListener("click",function(){
+            alert("Submitted value ="+maleinput.nodeValue);
+        })
+
+       var head = document.getElementById("head");
+    //    head.innerHTML="Hii Hello";
+    //    head.setAttribute("alt","This is my Image");
+     head.style.color="blue";
+    var newPara = document.createElement("p");
+    document.body.appendChild(newPara);
+    newPara.innerHTML="This is Generated";
+    newPara.style.color="Red";
+
+     newPara.addEventListener("mouseover",function(){
+        newPara.style.color="green";
+     })
+
+     newPara.parentElement.removeChild(head);
+
+     newPara.classList.add("green");
+    </script>
+    
+</body>
+</html>
